@@ -1,5 +1,5 @@
 [package]
-name = "my_multi_app"
+name = "logic"
 version = "0.1.0"
 edition = "2024"
 
@@ -8,7 +8,12 @@ name = "sandbox" # приложение, где всё подряд
 path = "src/bin/sandbox.rs"
 
 [[bin]]
+name = "game_guessing"
+path = "src/bin/game_guessing.rs"
+
+[[bin]]
 name = "app1"
 path = "src/bin/app1.rs"
 
 [dependencies]
+rand = "0.9.2"
