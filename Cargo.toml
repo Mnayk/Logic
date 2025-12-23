@@ -1,6 +1,14 @@
 [package]
-name = "cargo"
+name = "my_multi_app"
 version = "0.1.0"
 edition = "2024"
+
+[[bin]]
+name = "sandbox" # приложение, где всё подряд
+path = "src/bin/sandbox.rs"
+
+[[bin]]
+name = "app1"
+path = "src/bin/app1.rs"
 
 [dependencies]
