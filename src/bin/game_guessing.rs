@@ -1,11 +1,10 @@
 use std::io;
-use rand::Rng;
 use std::cmp::Ordering;
 
 fn main() {
     println!("Угадай число!");
 
-    let secret_number = rand::thread_rng().gen_range(1..=100);
+    let secret_number = rand::random_range(1..=100);
 
     loop {
         println!("Введите ваше предположение:");
