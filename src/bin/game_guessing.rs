@@ -1,5 +1,5 @@
-use std::io;
 use std::cmp::Ordering;
+use std::io;
 
 fn main() {
     println!("Угадай число!");
@@ -19,7 +19,7 @@ fn main() {
             Ok(num) => num,
             Err(_) => continue,
         };
-        
+
         println!("Вы предположили: {guess}");
 
         match guess.cmp(&secret_number) {

@@ -1,0 +1,4 @@
+# .cargo/config.toml
+
+[target.x86-64-apple-darwin]
+rustflags = ["-C", "link-arg=-fuse-ld=lld"]
