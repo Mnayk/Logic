@@ -17,6 +17,7 @@ group_id = None  # Или укажите ID напрямую, например -
 # Количество сообщений для проверки (чтобы не сканировать всю историю)
 message_limit = 10  # Маленькое число для теста, увеличьте позже
 
+
 async def main():
     async with TelegramClient('session', api_id, api_hash) as client:
         # Авторизация (если сессия новая, введите код из Telegram)
@@ -77,8 +78,8 @@ async def main():
                     try:
                         await client.delete_messages(group, msg.id, revoke=True)
                         deleted_count += 1
-                        print(f"Удалено сообщение ID: {msg.id}")
-                        time.sleep(1)  # Пауза 1 сек, чтобы избежать лимитов API
+                        print(f"Удалено сообщение ID: {msg.id}; deleted_count: {deleted_count} из {len(my_messages) - 1}")
+                        time.sleep(0.7)  # Пауза 1 сек, чтобы избежать лимитов API
                     except Exception as e:
                         print(f"Ошибка при удалении ID {msg.id}: {e}")
                 print(f"Всего удалено: {deleted_count} сообщений (плюс первое, если удалено).")
